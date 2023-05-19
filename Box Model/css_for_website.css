@@ -1,0 +1,136 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ccc4c4;
+}
+
+.container {
+  padding: 20px;
+  background-color: #fff;
+}
+
+h1 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  font-weight: 900;
+  color: maroon;
+  text-shadow: 1px 2px 2px rgb(193, 209, 71);
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+.read-more {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: #888;
+  border: #888;
+  border-radius: 2px;
+  text-align: center;
+  font-size: medium;
+  padding: 12px;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.contact-info {
+  margin-top: 20px;
+  font-size: 14px;
+  background: rgba(5, 5, 5, 0.3) ;
+  padding: 5px;
+  color: black;
+}
+
+.contact-info:before {
+  content: "\2744"; /*unicode of snowflake*/
+  color: maroon;
+  shape-rendering: crispEdges;
+  font-size: 100px;
+  display: flex; /*for putting symbol at center every time as screen changes   */
+  justify-content: center;
+  align-items: center;
+}
+
+.column-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  background-color: #ccc4c4;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0.1, 0.1, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Style each column */
+.column {
+  flex-basis: calc(33.33% - 20px); /*To occupy one third of screen and minus 20 for margin size */
+  margin-bottom: 20px;
+  padding: 50px;
+  box-sizing: border-box;
+  text-align: justify;
+  border-bottom: 2px solid maroon;
+}
+
+.column-transform {
+  color: maroon;
+  text-align: center;
+  font-weight: 600;
+}
+
+.column-transform::before {
+  content: "\2618";
+  font-size: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 30px;
+    text-shadow: 1px 2px 2px rgb(193, 209, 71);
+  }
+
+  .contact-info {
+    margin-top: 15px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 5px;
+  }
+
+  h1 {
+    font-size: 22px;
+    text-shadow: 1px 2px 2px rgb(193, 209, 71);
+  }
+
+  .contact-info {
+    margin-top: 10px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .column {
+    flex-basis: calc(50% - 20px);
+    text-align: justify;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .column {
+    flex-basis: 100%;
+    text-align: justify;
+  }
+}
